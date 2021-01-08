@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title "Default title" %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 5rem;
+        }
+    </style>
+    {% block style %}{% endblock %}
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Mon super site</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Item 1</a>
+        </li>
+    </ul>
+    <div class="navbar-nav"></div>
+</nav>
+
+<div id="main-page">
+    {% block body %}{% endblock %}
+</div>
+
+{% block script %}{% endblock %}
+
+</body>
+</html>
